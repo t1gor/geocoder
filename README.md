@@ -18,8 +18,8 @@ Where `$coords` is an array like this:
 ```php
 array(
     'source'    => 'google',
-    'lat'	=> 41.6659568,
-    'lng'	=> -80.808452,
+    'lat'		=> 41.6659568,
+    'lng'		=> -80.808452,
 )
 ```
     
