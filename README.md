@@ -24,8 +24,9 @@ array(
 ```
     
 Optionally, you can specify the source API:
-
-    $coords = GeoCoder::get_coords($adress, 'google');
+```php
+$coords = GeoCoder::get_coords($adress, 'google');
+```
     
 Source API's are prioritised like this: [Google](https://developers.google.com/maps/documentation/geocoding/), [MapQuest](http://developer.mapquest.com/web/products/open/geocoding-service), [GeoCodeFarm](http://www.geocodefarm.com/geocoding-dashboard.php?reg=1).
 
