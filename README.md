@@ -33,8 +33,35 @@ Source API's are prioritised like this: [Google](https://developers.google.com/m
 Speeding up
 --------------------
 
-I found it much more efficient with some caching usage. This is a class I used - https://github.com/gilbitron/PHP-SimpleCache.
-For more details - please see the example file.
+I found it much more efficient with some caching usage. I used - [PHP-SimpleCache](https://github.com/gilbitron/PHP-SimpleCache).
+Here's an axample:
+
+```php
+...
+// load cache class
+require_once('SimpleCache.php');
+
+// check if cache
+if ($cache->is_cached($adress)) {
+	$geo_data = json_decode($cache->get_cache($adress));
+	$geo_data = array(
+		'source'	=> $geo_data->source,
+		'lat'		=> $geo_data->lat,
+		'lng'		=> $geo_data->lng,
+	);
+}
+else {
+	// get coords
+	$geo_data = GeoCoder::get_coords($adress);
+
+	// cache the response (only if coded ok)
+	if (is_array($geo_data)) {
+		$cache->set_cache($adress, json_encode($geo_data));
+	}
+}
+...
+
+```
 
 
 Have fun!
