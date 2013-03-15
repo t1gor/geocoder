@@ -30,4 +30,11 @@ $coords = GeoCoder::get_coords('Central Park, New York, NY, USA', 'google');
     
 Source API's are prioritised like this: [Google](https://developers.google.com/maps/documentation/geocoding/), [MapQuest](http://developer.mapquest.com/web/products/open/geocoding-service), [GeoCodeFarm](http://www.geocodefarm.com/geocoding-dashboard.php?reg=1).
 
+Speeding up
+--------------------
+
+I found it much more efficient with some caching usage. This is a class I used - https://github.com/gilbitron/PHP-SimpleCache.
+For more details - please see the example file.
+
+
 Have fun!
