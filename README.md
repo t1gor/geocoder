@@ -10,17 +10,17 @@ Uses 3 API's:
 Usage example
 --------------------
 ```php
-    $coords = GeoCoder::get_coords($adress);
+$coords = GeoCoder::get_coords($adress);
 ```
     
 Where `$coords` is an array like this:
 
 ```php
-    array(
-        'source'    => 'api source',
-        'lat'		=> latitude,
-        'lng'		=> longitude,
-    )
+array(
+    'source'    => 'api source',
+    'lat'		=> latitude,
+    'lng'		=> longitude,
+)
 ```
     
 Optionally, you can specify the source API:
